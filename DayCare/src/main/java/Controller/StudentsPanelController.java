@@ -11,11 +11,11 @@ import Model.Classroom;
 import Model.School;
 import Model.Student;
 import Model.Teacher;
-import View.Students.AddStudentPanel;
-import View.Students.ImmunizationPanel;
-import View.Students.RegistrationPanel;
-import View.Students.StudentInformationPanel;
-import View.Students.StudentsPanel;
+import View.Students.AddStu;
+import View.Students.Immu;
+import View.Students.Registration;
+import View.Students.StuInfo;
+import View.Students.Students;
 import java.awt.CardLayout;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,7 +31,7 @@ public class StudentsPanelController {
     private JPanel container;
     private School school;
 
-    private StudentsPanel panel;
+    private Students panel;
 
     public JButton addStudentButton;
     public JButton backButton;
@@ -47,7 +47,7 @@ public class StudentsPanelController {
         this.container = container;
         this.school = school;
 
-        this.panel = new StudentsPanel();
+        this.panel = new Students();
 
         this.addStudentButton = panel.addStudentButton;
         this.backButton = panel.backButton;
@@ -143,7 +143,7 @@ public class StudentsPanelController {
     }
 
     private void showStudentRegistrationInfo() {
-        RegistrationPanel rp = new RegistrationPanel(container, school);
+        Registration rp = new Registration(container, school);
         CardLayout layout = (CardLayout) container.getLayout();
         container.add(rp);
         layout.next(container);

@@ -7,13 +7,13 @@ package View;
 
 import Business.DB4OUtil;
 import Controller.ClassroomsPanelController;
-import View.Students.StudentsPanel;
+import View.Students.Students;
 import Helper.ImageHelper;
 import Controller.StudentsPanelController;
 import Model.Admin;
 import Model.School;
 import View.Classrooms.ClassroomsPanel;
-import View.Students.RegistrationPanel;
+import View.Students.Registration;
 import View.Teachers.TeachersPanel;
 import com.db4o.Db4o;
 import java.awt.CardLayout;
@@ -47,7 +47,7 @@ public class DashboardPanel extends javax.swing.JPanel {
     /**
      * Creates new form DashboardPanel
      */
-    public DashboardPanel(JPanel mainContainer, Admin admin, School school) {
+    public DashboardPanel(JPanel mainContainer, School school) {
         initComponents();
 
         buttonIconMap.put(studentsButton, "/icons/student.png");
@@ -62,9 +62,9 @@ public class DashboardPanel extends javax.swing.JPanel {
         }
         // scaleandSetTileImage("/icons/students.png", studentsButton);
         this.mainContainer = mainContainer;
-        this.admin = admin;
+//        this.admin = admin;
         this.school = school;
-        userGreetingLabel.setText("Hello, " + admin.getName());
+//        userGreetingLabel.setText("Hello, " + admin.getName());
         // teacherLabelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/teacher64.png")));
     }
 
@@ -110,16 +110,12 @@ public class DashboardPanel extends javax.swing.JPanel {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        logoutButton = new javax.swing.JButton();
-        userGreetingLabel = new javax.swing.JLabel();
         daycareLabel = new javax.swing.JLabel();
         dashboardContainer = new javax.swing.JPanel();
         homePanel = new javax.swing.JPanel();
         studentsTile = new javax.swing.JPanel();
         studentsButton = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
         teachersButton = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
         classroomsButton = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(1100, 800));
@@ -128,17 +124,6 @@ public class DashboardPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        logoutButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        logoutButton.setText("Logout");
-        logoutButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutButtonActionPerformed(evt);
-            }
-        });
-
-        userGreetingLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        userGreetingLabel.setText("Hello, ");
 
         daycareLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         daycareLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -151,20 +136,10 @@ public class DashboardPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(daycareLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 521, Short.MAX_VALUE)
-                .addComponent(userGreetingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(logoutButton)
-                .addGap(18, 18, 18))
+                .addContainerGap(751, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(logoutButton)
-                    .addComponent(userGreetingLabel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(daycareLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -189,21 +164,6 @@ public class DashboardPanel extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout studentsTileLayout = new javax.swing.GroupLayout(studentsTile);
-        studentsTile.setLayout(studentsTileLayout);
-        studentsTileLayout.setHorizontalGroup(
-            studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(studentsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
-        );
-        studentsTileLayout.setVerticalGroup(
-            studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(studentsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
-        );
-
-        homePanel.add(studentsTile);
-
-        jPanel4.setBackground(java.awt.SystemColor.inactiveCaption);
-
         teachersButton.setBackground(java.awt.SystemColor.inactiveCaption);
         teachersButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         teachersButton.setText("Teachers");
@@ -212,21 +172,6 @@ public class DashboardPanel extends javax.swing.JPanel {
                 teachersButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(teachersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(teachersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        homePanel.add(jPanel4);
-
-        jPanel5.setBackground(java.awt.SystemColor.inactiveCaption);
 
         classroomsButton.setBackground(java.awt.SystemColor.inactiveCaption);
         classroomsButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -237,18 +182,30 @@ public class DashboardPanel extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(classroomsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+        javax.swing.GroupLayout studentsTileLayout = new javax.swing.GroupLayout(studentsTile);
+        studentsTile.setLayout(studentsTileLayout);
+        studentsTileLayout.setHorizontalGroup(
+            studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(studentsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+            .addGroup(studentsTileLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(teachersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(classroomsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE))
+                .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(classroomsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
+        studentsTileLayout.setVerticalGroup(
+            studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(studentsTileLayout.createSequentialGroup()
+                .addComponent(studentsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(teachersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(classroomsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 197, Short.MAX_VALUE))
         );
 
-        homePanel.add(jPanel5);
+        homePanel.add(studentsTile);
 
         dashboardContainer.add(homePanel, "card2");
 
@@ -266,22 +223,13 @@ public class DashboardPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+    private void classroomsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classroomsButtonActionPerformed
         // TODO add your handling code here:
-        mainContainer.remove(this);
-        CardLayout layout = (CardLayout) mainContainer.getLayout();
-        layout.previous(mainContainer);
-        db4o.storeSystem(school);
-    }//GEN-LAST:event_logoutButtonActionPerformed
-
-    private void studentsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsButtonActionPerformed
-        // TODO add your handling code here:
-        
-        StudentsPanelController spc = new StudentsPanelController(dashboardContainer, school);
+        ClassroomsPanelController cpc = new ClassroomsPanelController(dashboardContainer, school);
         CardLayout layout = (CardLayout) dashboardContainer.getLayout();
-        dashboardContainer.add(spc.getStudentPanel());
+        dashboardContainer.add(cpc.getClassroomsPanel());
         layout.next(dashboardContainer);
-    }//GEN-LAST:event_studentsButtonActionPerformed
+    }//GEN-LAST:event_classroomsButtonActionPerformed
 
     private void teachersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachersButtonActionPerformed
         // TODO add your handling code here:
@@ -291,13 +239,14 @@ public class DashboardPanel extends javax.swing.JPanel {
         layout.next(dashboardContainer);
     }//GEN-LAST:event_teachersButtonActionPerformed
 
-    private void classroomsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classroomsButtonActionPerformed
+    private void studentsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsButtonActionPerformed
         // TODO add your handling code here:
-        ClassroomsPanelController cpc = new ClassroomsPanelController(dashboardContainer, school);        
+
+        StudentsPanelController spc = new StudentsPanelController(dashboardContainer, school);
         CardLayout layout = (CardLayout) dashboardContainer.getLayout();
-        dashboardContainer.add(cpc.getClassroomsPanel());
+        dashboardContainer.add(spc.getStudentPanel());
         layout.next(dashboardContainer);
-    }//GEN-LAST:event_classroomsButtonActionPerformed
+    }//GEN-LAST:event_studentsButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -306,13 +255,9 @@ public class DashboardPanel extends javax.swing.JPanel {
     private javax.swing.JLabel daycareLabel;
     private javax.swing.JPanel homePanel;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JButton logoutButton;
     private javax.swing.JButton studentsButton;
     private javax.swing.JPanel studentsTile;
     private javax.swing.JButton teachersButton;
-    private javax.swing.JLabel userGreetingLabel;
     // End of variables declaration//GEN-END:variables
 }

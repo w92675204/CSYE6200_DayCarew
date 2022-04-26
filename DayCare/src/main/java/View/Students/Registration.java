@@ -8,7 +8,7 @@ package View.Students;
 import Model.AbstractPerson;
 import Model.School;
 import Model.Student;
-import View.Students.StudentInformationPanel;
+import View.Students.StuInfo;
 import java.awt.CardLayout;
 import java.time.LocalDate;
 import java.util.Properties;
@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author vedan
  */
-public class RegistrationPanel extends javax.swing.JPanel {
+public class Registration extends javax.swing.JPanel {
 
     private JPanel container;
     private School school;
@@ -34,7 +34,7 @@ public class RegistrationPanel extends javax.swing.JPanel {
     /**
      * Creates new form RegistrationPanel
      */
-    public RegistrationPanel(JPanel container, School school) {
+    public Registration(JPanel container, School school) {
         initComponents();
         this.container = container;
         this.school = school;

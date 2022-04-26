@@ -9,9 +9,9 @@ package View.Students;
  *
  * @author vedan
  */
-public class AddStudentPanel extends javax.swing.JPanel {
+public class AddStu extends javax.swing.JPanel {
 
-    public AddStudentPanel() {
+    public AddStu() {
         initComponents();
     }
 
@@ -139,6 +139,12 @@ public class AddStudentPanel extends javax.swing.JPanel {
 
         jLabel4.setText("Name*");
 
+        parentNameTf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                parentNameTfActionPerformed(evt);
+            }
+        });
+
         jLabel10.setText("Email*");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -229,6 +235,10 @@ public class AddStudentPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void parentNameTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parentNameTfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_parentNameTfActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addStudentButton;
@@ -248,8 +258,8 @@ public class AddStudentPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    public javax.swing.JTextField parentEmailTf;
-    public javax.swing.JTextField parentNameTf;
+    private javax.swing.JTextField parentEmailTf;
+    private javax.swing.JTextField parentNameTf;
     public javax.swing.JTextField registrationTf;
     public javax.swing.JTextField studentFirstNameTf;
     public javax.swing.JTextField studentLastNameText;

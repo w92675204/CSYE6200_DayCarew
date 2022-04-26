@@ -7,8 +7,8 @@ package Controller;
 
 import Model.AbstractPerson;
 import Model.School;
-import View.Students.StudentInformationPanel;
-import View.Students.StudentsPanel;
+import View.Students.StuInfo;
+import View.Students.Students;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JButton;
@@ -25,7 +25,7 @@ public class StudentsInformationController {
     private AbstractPerson student;
     private StudentsPanelController prevController;
     
-    private StudentInformationPanel panel;
+    private StuInfo panel;
     
     public JButton backButton;
 
@@ -36,7 +36,7 @@ public class StudentsInformationController {
         
         this.prevController = prevController;
         
-        panel = new StudentInformationPanel(container, student, school);
+        panel = new StuInfo(container, student, school);
         
         this.backButton = panel.backButton;
         
@@ -47,7 +47,7 @@ public class StudentsInformationController {
         
     }
     
-    public StudentInformationPanel getStudentInformationPanel() {
+    public StuInfo getStudentInformationPanel() {
         return panel;
     }
     
@@ -57,7 +57,7 @@ public class StudentsInformationController {
         layout.previous(container);
         Component[] componentArray = container.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        StudentsPanel spanel = (StudentsPanel) component;
+        Students spanel = (Students) component;
         prevController.populateTable();
     }
     

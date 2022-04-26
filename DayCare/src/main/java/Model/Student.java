@@ -3,6 +3,7 @@ package Model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Student extends AbstractPerson {
 
@@ -21,33 +22,41 @@ public class Student extends AbstractPerson {
     private String parentEmail;
 
     public Student(String csv) {
+        System.out.println("create student fail");
         String[] item = csv.split(",");
         this.Id = Integer.parseInt(item[0]);
         this.Age = Integer.parseInt(item[1]);
         this.FirstName = item[2];
         this.LastName = item[3];
-        this.LastRegDate = LocalDate.parse(item[4]);
+        System.out.println("create student fail2");
+        this.LastRegDate = LocalDate.parse(item[4]);//有错
+        System.out.println("create student fail time error");
         ExpectReNewDate = LastRegDate.plusYears(1L);
         this.GPA = Double.parseDouble(item[5]);
-        this.parentName = item[6];
-        this.parentEmail = item[7];
-//        Scanner sc = new Scanner(csv);
-//        sc.useDelimiter(",");
-//        try {
-//            this.Id = sc.nextInt();
-//            this.Age = sc.nextInt();
-//            this.FirstName = sc.next();
-//            this.LastName = sc.next();
+//        this.parentName = item[6];
+//        this.parentEmail = item[7];
+        Scanner sc = new Scanner(csv);
+        sc.useDelimiter(",");
+        try {
+            this.Id = sc.nextInt();
+            this.Age = sc.nextInt();
+            this.FirstName = sc.next();
+            this.LastName = sc.next();
 //            this.ImuDate = LocalDate.parse(sc.next());
-//
-//
-//
-//
-//        }catch (Exception e) {
-//            // TODO: handle exception
-//            e.printStackTrace();
-//            System.out.println(csv);
-//        }
+
+
+
+
+        }catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+            System.out.println(csv);
+        }
+        System.out.println("create student fail3");
+    }
+
+    public Student() {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
@@ -207,9 +216,7 @@ public class Student extends AbstractPerson {
                 FirstName + "," +
                 LastName + "," +
                 LastRegDate.toString() + "," +
-                String.valueOf(GPA) + "," +
-                parentName + "," +
-                parentEmail;
+                String.valueOf(GPA);
     }
 
 

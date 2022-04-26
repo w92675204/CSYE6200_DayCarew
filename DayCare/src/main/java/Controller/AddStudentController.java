@@ -8,7 +8,7 @@ package Controller;
 import Model.School;
 import Model.Student;
 import Model.StudentFactory;
-import View.Students.AddStudentPanel;
+import View.Students.AddStu;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -24,33 +24,36 @@ public class AddStudentController {
     private School school;
     private StudentsPanelController prevController;
 
-    private AddStudentPanel panel;
-
+    private AddStu panel;
+    
+    public javax.swing.JTextField idTextField;
+    public javax.swing.JTextField studentLastNameText;
+    public javax.swing.JTextField studentFirstNameTf;
     public javax.swing.JButton addStudentButton;
     public javax.swing.JTextField ageText;
     public javax.swing.JButton backButton;
     public javax.swing.JTextField gpaTf;
-    public javax.swing.JTextField idTextField;
-    public javax.swing.JTextField parentEmailTf;
-    public javax.swing.JTextField parentNameTf;
+    
+//    public javax.swing.JTextField parentEmailTf;
+//    public javax.swing.JTextField parentNameTf;
     public javax.swing.JTextField registrationTf;
-    public javax.swing.JTextField studentFirstNameTf;
-    public javax.swing.JTextField studentLastNameText;
+    
+
 
     public AddStudentController(JPanel container, School school, StudentsPanelController prevController) {
         this.container = container;
         this.school = school;
         this.prevController = prevController;
 
-        this.panel = new AddStudentPanel();
+        this.panel = new AddStu();
 
         this.addStudentButton = panel.addStudentButton;
         this.ageText = panel.ageText;
         this.backButton = panel.backButton;
         this.gpaTf = panel.gpaTf;
         this.idTextField = panel.idTextField;
-        this.parentEmailTf = panel.parentEmailTf;
-        this.parentNameTf = panel.parentNameTf;
+//        this.parentEmailTf = panel.parentEmailTf;
+//        this.parentNameTf = panel.parentNameTf;
         this.registrationTf = panel.registrationTf;
         this.studentFirstNameTf = panel.studentFirstNameTf;
         this.studentLastNameText = panel.studentLastNameText;
@@ -65,7 +68,7 @@ public class AddStudentController {
 
     }
 
-    public AddStudentPanel getAddStudentsPanel() {
+    public AddStu getAddStudentsPanel() {
         return panel;
     }
 
@@ -91,10 +94,10 @@ public class AddStudentController {
         String studentLastName = studentLastNameText.getText();
         String regDate = registrationTf.getText();
         String gpa = gpaTf.getText();
-        String parentName = parentNameTf.getText();
-        String parentEmail = parentEmailTf.getText();
+//        String parentName = parentNameTf.getText();
+//        String parentEmail = parentEmailTf.getText();
 
-        if (studentFirstName.equals("") || age.equals("") || id.equals("") || studentLastName.equals("") || regDate.equals("") || gpa.equals("") || parentName.equals("") || parentEmail.equals("")) {
+        if (studentFirstName.equals("") || age.equals("") || id.equals("") || studentLastName.equals("") || regDate.equals("") || gpa.equals("")) {
             JOptionPane.showMessageDialog(panel,
                     "Please fill all the required fields",
                     "Error Message",
@@ -104,10 +107,10 @@ public class AddStudentController {
 
 //        String address = addressText.getText();
 //        String gender = genderCombo.getSelectedItem().toString();
-        String studentString = id + "," + age + "," + studentFirstName + "," + studentLastName + "," + regDate + "," + gpa + "," + parentName + "," + parentEmail;
+        String studentString = id + "," + age + "," + studentFirstName + "," + studentLastName + "," + regDate + "," + gpa ;
 
         try {
-            Student s = StudentFactory.getInstance().getObject(studentString);
+            Student s = StudentFactory.getInstance().getObject(studentString);//有错原因：添加时间格式要按照2008-03-06格式来写
             school.addStudent(s);
             // school.addAllStudentToCSV();
         } catch (NumberFormatException e) {

@@ -35,8 +35,12 @@ public class LandingController {
     private JPasswordField passwordField;        
     private JTextField usernameText;
     
-    public LandingController() {      
+    public LandingController() {  
+        
+//        loginToApplication();
+        
         school = dB4OUtil.retrieveSystem();        
+//        form= new DashboardPanel();
         form = new Landing();
         form.pack();
         form.setVisible(true);
@@ -50,19 +54,19 @@ public class LandingController {
         this.passwordField = form.passwordField;
         this.loginButton = form.loginButton;        
         
-        buildIconsForLandingPage();
+//        buildIconsForLandingPage();
         
         // Add event listener to perform action on close (X) operation
-        form.addWindowListener(new java.awt.event.WindowAdapter() {
-            @Override
-            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-                dB4OUtil.storeSystem(school);
-            }
-        });
+//        form.addWindowListener(new java.awt.event.WindowAdapter() {
+//            @Override
+//            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+//                dB4OUtil.storeSystem(school);
+//            }
+//        });
         
-        loginButton.addActionListener(e -> {
+//        loginButton.addActionListener(e -> {
             loginToApplication();
-        });
+//        });
         
     }
     
@@ -71,22 +75,29 @@ public class LandingController {
          imageHelper.scaleAndSetLabelIcon("/icons/day.png", daycareLabel, 100, 100, "Daycare logo");
     }
     
-    private void loginToApplication() {
-        String username = usernameText.getText();        
-        String password = String.valueOf(passwordField.getPassword());
-
-        if (admin.signIn(username, password)) {
-            DashboardPanel dp = new DashboardPanel(mainContainer, admin, school);
-            CardLayout layout = (CardLayout) mainContainer.getLayout();
-            mainContainer.add(dp);
-            layout.next(mainContainer);
-        } else {
-            JOptionPane.showMessageDialog(form,
-                    "Invalid username/password. Try again.",
-                    "Error Message",
-                    JOptionPane.ERROR_MESSAGE);
-        }
+    private void loginToApplication(){
+        DashboardPanel dp = new DashboardPanel(mainContainer, school);
+        CardLayout layout = (CardLayout) mainContainer.getLayout();
+        mainContainer.add(dp);
+        layout.next(mainContainer);
     }
+    
+//    private void loginToApplication() {
+//        String username = usernameText.getText();        
+//        String password = String.valueOf(passwordField.getPassword());
+//
+//        if (admin.signIn(username, password)) {
+//            DashboardPanel dp = new DashboardPanel(mainContainer, admin, school);
+//            CardLayout layout = (CardLayout) mainContainer.getLayout();
+//            mainContainer.add(dp);
+//            layout.next(mainContainer);
+//        } else {
+//            JOptionPane.showMessageDialog(form,
+//                    "Invalid username/password. Try again.",
+//                    "Error Message",
+//                    JOptionPane.ERROR_MESSAGE);
+//        }
+//    }
     
     public static void main(String[] args) {
         LandingController lc = new LandingController();

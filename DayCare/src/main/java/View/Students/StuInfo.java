@@ -23,7 +23,7 @@ import javax.swing.JTextField;
  *
  * @author vedan
  */
-public class StudentInformationPanel extends javax.swing.JPanel {
+public class StuInfo extends javax.swing.JPanel {
 
     private JPanel container;
     private School school;
@@ -32,7 +32,7 @@ public class StudentInformationPanel extends javax.swing.JPanel {
     /**
      * Creates new form StudentInformationPanel
      */
-    public StudentInformationPanel(JPanel container, AbstractPerson student, School school) {
+    public StuInfo(JPanel container, AbstractPerson student, School school) {
         initComponents();
         this.container = container;
         this.student = student;

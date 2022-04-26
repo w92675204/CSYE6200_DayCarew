@@ -9,12 +9,12 @@ package View.Students;
  *
  * @author vedan
  */
-public class ImmunizationPanel extends javax.swing.JPanel {
+public class Immu extends javax.swing.JPanel {
 
     /**
      * Creates new form ImmunizationPanel
      */
-    public ImmunizationPanel() {
+    public Immu() {
         initComponents();
     }
 

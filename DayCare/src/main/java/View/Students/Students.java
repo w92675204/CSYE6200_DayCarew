@@ -9,12 +9,12 @@ package View.Students;
  *
  * @author vedan
  */
-public class StudentsPanel extends javax.swing.JPanel {
+public class Students extends javax.swing.JPanel {
 
     /**
      * Creates new form StudentsPanel
      */
-    public StudentsPanel() {
+    public Students() {
         initComponents();
     }
 

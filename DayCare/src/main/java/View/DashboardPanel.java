@@ -49,10 +49,10 @@ public class DashboardPanel extends javax.swing.JPanel {
     public DashboardPanel(JPanel mainContainer, School school) {
         initComponents();
 
-        buttonIconMap.put(studentsButton, "/icons/student.png");
+        buttonIconMap.put(studentsButton, "/icons/student.jpg");
         buttonIconMap.put(teachersButton, "/icons/teacher.png");
         buttonIconMap.put(classroomsButton1, "/icons/classroom.png");
-        buttonIconMap.put(immunizationButton, "/icons/classroom.png");
+        buttonIconMap.put(immunizationButton, "/icons/immunization.png");
 
         
 
@@ -77,11 +77,11 @@ public class DashboardPanel extends javax.swing.JPanel {
         // imageHelper.scaleAndSetLabelIcon("/icons/day.png", daycareLabel, 100, 100, "Daycare logo");
         // this.setLocationRelativeTo(null);
 
-        ImageIcon imageIcon = createImageIcon("/icons/day.png", "Daycare logo");
-        Image image = imageIcon.getImage();
-        Image newimg = image.getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
-        imageIcon = new ImageIcon(newimg);
-        daycareLabel.setIcon(imageIcon);
+//        ImageIcon imageIcon = createImageIcon("/icons/day.png", "Daycare logo");
+//        Image image = imageIcon.getImage();
+//        Image newimg = image.getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
+//        imageIcon = new ImageIcon(newimg);
+//        daycareLabel.setIcon(imageIcon);
         // daycareLabel.setVerticalTextPosition(SwingConstants.RIGHT);
         // daycareLabel.setHorizontalTextPosition(SwingConstants.CENTER);
     }
@@ -131,7 +131,7 @@ public class DashboardPanel extends javax.swing.JPanel {
 
         daycareLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         daycareLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        daycareLabel.setText("PRUDENTIAL DAYCARE");
+        daycareLabel.setText("DAYCARE");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -204,20 +204,21 @@ public class DashboardPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(teachersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(immunizationButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1064, Short.MAX_VALUE)
-                    .addComponent(classroomsButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 1064, Short.MAX_VALUE))
+                    .addComponent(immunizationButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
+                    .addComponent(classroomsButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE))
                 .addContainerGap())
         );
         studentsTileLayout.setVerticalGroup(
             studentsTileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(studentsTileLayout.createSequentialGroup()
-                .addComponent(studentsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addComponent(studentsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(teachersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
                 .addComponent(classroomsButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(immunizationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(immunizationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         homePanel.add(studentsTile);

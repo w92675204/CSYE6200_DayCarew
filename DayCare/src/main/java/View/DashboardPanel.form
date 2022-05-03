@@ -85,7 +85,7 @@
                   <Font name="Segoe UI" size="18" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="PRUDENTIAL DAYCARE"/>
+                <Property name="text" type="java.lang.String" value="DAYCARE"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -136,8 +136,8 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="teachersButton" max="32767" attributes="0"/>
-                                  <Component id="immunizationButton" alignment="1" pref="1064" max="32767" attributes="0"/>
-                                  <Component id="classroomsButton1" alignment="0" pref="1064" max="32767" attributes="0"/>
+                                  <Component id="immunizationButton" alignment="1" pref="1068" max="32767" attributes="0"/>
+                                  <Component id="classroomsButton1" alignment="0" pref="1068" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -146,13 +146,14 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="studentsButton" min="-2" pref="122" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="studentsButton" min="-2" pref="141" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="teachersButton" min="-2" pref="155" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="classroomsButton1" min="-2" pref="160" max="-2" attributes="0"/>
-                              <EmptySpace pref="47" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="immunizationButton" min="-2" pref="160" max="-2" attributes="0"/>
+                              <EmptySpace pref="56" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

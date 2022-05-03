@@ -22,10 +22,7 @@ import java.util.Map;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author vedan
- */
+
 public class StudentsPanelController {
 
     private JPanel container;

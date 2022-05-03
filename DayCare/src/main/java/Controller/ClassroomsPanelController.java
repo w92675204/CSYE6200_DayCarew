@@ -15,10 +15,6 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author vedan
- */
 public class ClassroomsPanelController {
 
     private JPanel container;

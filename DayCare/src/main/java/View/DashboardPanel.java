@@ -34,10 +34,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-/**
- *
- * @author vedan
- */
+
 public class DashboardPanel extends javax.swing.JPanel {
 
     private JPanel mainContainer;

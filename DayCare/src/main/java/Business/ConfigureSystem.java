@@ -14,10 +14,7 @@ import Model.Vax;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author vedan
- */
+
 public class ConfigureSystem {
 
     public static School configure() {

@@ -15,10 +15,6 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 import javax.swing.JPanel;
 
-/**
- *
- * @author vedan
- */
 public class EmployeeReviewsPanel extends javax.swing.JPanel {
     
     private JPanel container;

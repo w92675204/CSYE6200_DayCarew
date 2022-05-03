@@ -31,10 +31,6 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
-/**
- *
- * @author vedan
- */
 public class ClassroomsInformationPanel extends javax.swing.JPanel {
 
     private JPanel container;

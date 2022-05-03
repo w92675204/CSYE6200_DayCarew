@@ -5,10 +5,7 @@
  */
 package View.Immunization;
 
-/**
- *
- * @author vedan
- */
+
 public class ImmunizationInformationPanel extends javax.swing.JPanel {
 
     /**

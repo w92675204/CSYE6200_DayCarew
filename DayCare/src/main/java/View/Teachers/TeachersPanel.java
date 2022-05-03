@@ -21,10 +21,7 @@ import java.util.Map;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author vedan
- */
+
 public class TeachersPanel extends javax.swing.JPanel {
 
     private JPanel container;

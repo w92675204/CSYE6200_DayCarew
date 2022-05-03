@@ -15,10 +15,7 @@ import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author vedan
- */
+
 public class ImmunizationPanelController {
 
     private JPanel container;

@@ -19,10 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-/**
- *
- * @author vedan
- */
+
 public class StuInfo extends javax.swing.JPanel {
 
     private JPanel container;

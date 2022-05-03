@@ -22,10 +22,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author vedan
- */
 public class Registration extends javax.swing.JPanel {
 
     private JPanel container;

@@ -5,10 +5,7 @@
  */
 package Model;
 
-/**
- *
- * @author vedan
- */
+
 public class Admin {
 
     /**

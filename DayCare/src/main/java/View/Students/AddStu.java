@@ -10,10 +10,7 @@ import Controller.StudentsPanelController;
 import Model.School;
 import javax.swing.JPanel;
 
-/**
- *
- * @author vedan
- */
+
 public class AddStu extends javax.swing.JPanel {
     
 //    private JPanel container;

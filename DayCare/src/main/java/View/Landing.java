@@ -7,10 +7,7 @@ package View;
 
 import javax.swing.JPanel;
 
-/**
- *
- * @author vedan
- */
+
 public class Landing extends javax.swing.JFrame {
 
     /**

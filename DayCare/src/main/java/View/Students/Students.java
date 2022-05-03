@@ -5,10 +5,7 @@
  */
 package View.Students;
 
-/**
- *
- * @author vedan
- */
+
 public class Students extends javax.swing.JPanel {
 
     /**

@@ -14,10 +14,7 @@ import java.awt.Component;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-/**
- *
- * @author vedan
- */
+
 public class StudentsInformationController {
 
     private JPanel container;

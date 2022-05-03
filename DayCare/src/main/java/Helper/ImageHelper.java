@@ -12,10 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-/**
- *
- * @author vedan
- */
+
 public class ImageHelper {
 
     public void scaleAndSetButtonIcon(String imagePath, JButton button, int width, int height) {

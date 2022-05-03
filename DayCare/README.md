@@ -1,14 +1,18 @@
-# DayCare
-Final project for CSYE6200
+# DayCare Project
+Students, Teachers, Classrooms, and Immunization Management
 
-# Team members
-- Vedant Deokar
-- Tianxiang Ren
-- Zibin Kang
-- Shakti Rao
-- Xuhui Zhu
-- Yucong Feng
+# Group Members
 
-# Setup instructions
-- Install Apache Netbeans - Download here https://netbeans.apache.org/download/index.html
-- Open Netbeans -> File - Open Project -> Locate the repository -> Open the DayCare project
+- Jiawei Qian
+- Chunzheng Wen
+- Jiao He
+- Fangyu Wu
+- Zifeng Xu
+- Siyan Li
+- Ching-Fong Chen
+- Yi-Chen Yi
+
+# Environment
+
+- Apache Netbeans 12.5
+- JDK 1.8

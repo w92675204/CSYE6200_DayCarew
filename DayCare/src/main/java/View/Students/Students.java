@@ -34,7 +34,6 @@ public class Students extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         addStudentButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        immunizationButton = new javax.swing.JButton();
         registrationButton = new javax.swing.JButton();
         viewStudentButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
@@ -87,18 +86,23 @@ public class Students extends javax.swing.JPanel {
         );
 
         addStudentButton.setText("Add student");
+        addStudentButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addStudentButtonActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel3.setLayout(new java.awt.GridLayout(2, 0, 5, 10));
 
-        immunizationButton.setBackground(java.awt.SystemColor.inactiveCaption);
-        immunizationButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        immunizationButton.setText("Immunization");
-        jPanel3.add(immunizationButton);
-
         registrationButton.setBackground(java.awt.SystemColor.inactiveCaption);
         registrationButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         registrationButton.setText("Registration ");
+        registrationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrationButtonActionPerformed(evt);
+            }
+        });
         jPanel3.add(registrationButton);
 
         viewStudentButton.setText("View details");
@@ -171,12 +175,19 @@ public class Students extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void registrationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrationButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registrationButtonActionPerformed
+
+    private void addStudentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addStudentButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addStudentButton;
     public javax.swing.JButton backButton;
     public javax.swing.JButton deleteButton;
-    public javax.swing.JButton immunizationButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

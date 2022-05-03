@@ -12,7 +12,7 @@ import Model.School;
 import Model.Student;
 import Model.Teacher;
 import View.Students.AddStu;
-import View.Students.Immu;
+import View.Immunization.ImmunizationInformationPanel;
 import View.Students.Registration;
 import View.Students.StuInfo;
 import View.Students.Students;
@@ -36,7 +36,7 @@ public class StudentsPanelController {
     public JButton addStudentButton;
     public JButton backButton;
     public JButton deleteButton;
-    private JButton immunizationButton;
+//    private JButton immunizationButton;
     public JButton registrationButton;
     public JButton viewStudentButton;
     private JTable studentsTable;
@@ -52,7 +52,7 @@ public class StudentsPanelController {
         this.addStudentButton = panel.addStudentButton;
         this.backButton = panel.backButton;
         this.deleteButton = panel.deleteButton;
-        this.immunizationButton = panel.immunizationButton;
+//        this.immunizationButton = panel.immunizationButton;
         this.registrationButton = panel.registrationButton;
         this.viewStudentButton = panel.viewStudentButton;
 
@@ -70,9 +70,9 @@ public class StudentsPanelController {
             showStudentRegistrationInfo();
         });
 
-        immunizationButton.addActionListener(l -> {
-            showImmunizationInfo();
-        });
+//        immunizationButton.addActionListener(l -> {
+//            showImmunizationInfo();
+//        });
 
         deleteButton.addActionListener(l -> {
             deleteStudent();
@@ -93,7 +93,7 @@ public class StudentsPanelController {
     private void setIcons() {
         ImageHelper imageHelper = new ImageHelper();
 
-        buttonIconMap.put(immunizationButton, "/icons/immunization.png");
+//        buttonIconMap.put(immunizationButton, "/icons/immunization.png");
         buttonIconMap.put(registrationButton, "/icons/renewal.png");
 
         for (Map.Entry<JButton, String> button : buttonIconMap.entrySet()) {
@@ -150,7 +150,7 @@ public class StudentsPanelController {
     }
 
     private void showImmunizationInfo() {
-        ImmunizationPanelController ipc = new ImmunizationPanelController(container, school, this);
+        ImmunizationPanelController ipc = new ImmunizationPanelController(container, school);
         CardLayout layout = (CardLayout) container.getLayout();
         container.add(ipc.getImmunizationPanel());
         layout.next(container);

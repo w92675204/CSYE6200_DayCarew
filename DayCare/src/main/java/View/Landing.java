@@ -76,6 +76,7 @@ public class Landing extends javax.swing.JFrame {
 
         daycareLabel.setBackground(new java.awt.Color(255, 255, 255));
         daycareLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        daycareLabel.setForeground(new java.awt.Color(255, 255, 255));
         daycareLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         daycareLabel.setText("PRUDENTIAL DAYCARE");
         jPanel1.add(daycareLabel);
@@ -89,15 +90,19 @@ public class Landing extends javax.swing.JFrame {
 
         usernameLabel.setBackground(new java.awt.Color(153, 153, 153));
         usernameLabel.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        usernameLabel.setForeground(new java.awt.Color(255, 255, 255));
         usernameLabel.setText("Username: ");
 
         usernameText.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        usernameText.setForeground(new java.awt.Color(255, 255, 255));
         usernameText.setText("admin");
 
         passwordLabel.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        passwordLabel.setForeground(new java.awt.Color(255, 255, 255));
         passwordLabel.setText("Password:");
 
         passwordField.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        passwordField.setForeground(new java.awt.Color(255, 255, 255));
         passwordField.setText("admin");
 
         loginButton.setBackground(new java.awt.Color(51, 19, 245));
@@ -115,11 +120,14 @@ public class Landing extends javax.swing.JFrame {
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordLabel)
-                            .addComponent(usernameLabel)
-                            .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(usernameText)
-                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(loginPanelLayout.createSequentialGroup()
+                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(passwordLabel)
+                                    .addComponent(usernameLabel))
+                                .addGap(245, 245, 245))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(usernameText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))

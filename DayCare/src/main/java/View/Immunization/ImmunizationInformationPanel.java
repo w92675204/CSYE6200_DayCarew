@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View.Students;
+package View.Immunization;
 
 /**
  *
  * @author vedan
  */
-public class Immu extends javax.swing.JPanel {
+public class ImmunizationInformationPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ImmunizationPanel
      */
-    public Immu() {
+    public ImmunizationInformationPanel() {
         initComponents();
     }
 

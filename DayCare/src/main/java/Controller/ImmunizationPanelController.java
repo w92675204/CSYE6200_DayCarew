@@ -9,7 +9,7 @@ import Model.AbstractPerson;
 import Model.School;
 import Model.Student;
 import Model.Vax;
-import View.Students.Immu;
+import View.Immunization.ImmunizationInformationPanel;
 import java.awt.CardLayout;
 import java.util.List;
 import javax.swing.JPanel;
@@ -24,19 +24,18 @@ public class ImmunizationPanelController {
     private JPanel container;
     private School school;
     private List<AbstractPerson> studentsList;
-    private StudentsPanelController prevController;
+//    private StudentsPanelController prevController;
 
-    private Immu panel;
+    private ImmunizationInformationPanel panel;
 
     private javax.swing.JButton backButton;
     public javax.swing.JTable immuTable;
 
-    public ImmunizationPanelController(JPanel container, School school, StudentsPanelController prevController) {
+    public ImmunizationPanelController(JPanel container, School school) {
         this.container = container;
         this.school = school;
-        this.prevController = prevController;
 
-        this.panel = new Immu();
+        this.panel = new ImmunizationInformationPanel();
         this.backButton = panel.backButton;
         this.immuTable = panel.immuTable;
 
@@ -46,7 +45,7 @@ public class ImmunizationPanelController {
 
     }
 
-    public Immu getImmunizationPanel() {
+    public ImmunizationInformationPanel getImmunizationPanel() {
         populateTable();
         return panel;
     }

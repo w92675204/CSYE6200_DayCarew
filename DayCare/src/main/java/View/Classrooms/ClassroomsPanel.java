@@ -85,6 +85,11 @@ public class ClassroomsPanel extends javax.swing.JPanel {
         );
 
         viewDetailsButton.setText("View details");
+        viewDetailsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewDetailsButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -126,6 +131,11 @@ public class ClassroomsPanel extends javax.swing.JPanel {
 
         add(jPanel2);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void viewDetailsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDetailsButtonActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_viewDetailsButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

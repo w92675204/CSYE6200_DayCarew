@@ -71,7 +71,6 @@ public class Registration extends javax.swing.JPanel {
         viewTeacherButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
-        notifyButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         expiredTable = new javax.swing.JTable();
 
@@ -92,13 +91,6 @@ public class Registration extends javax.swing.JPanel {
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
-            }
-        });
-
-        notifyButton.setText("Send a reminder");
-        notifyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                notifyButtonActionPerformed(evt);
             }
         });
 
@@ -143,10 +135,6 @@ public class Registration extends javax.swing.JPanel {
                         .addGap(215, 215, 215)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(58, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(463, 463, 463)
-                .addComponent(notifyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,9 +145,7 @@ public class Registration extends javax.swing.JPanel {
                     .addComponent(backButton))
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(notifyButton)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -195,66 +181,12 @@ public class Registration extends javax.swing.JPanel {
         // System.out.println("Teacher not found");        
     }//GEN-LAST:event_viewTeacherButtonActionPerformed
 
-    private void notifyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notifyButtonActionPerformed
-        // TODO add your handling code here:        
-        int selectedRow = expiredTable.getSelectedRow();
-
-        if (selectedRow < 0) {
-            return;
-        }
-
-        int studentId = (int) expiredTable.getValueAt(selectedRow, 0);
-        AbstractPerson selectedStudent = school.findStudentById(studentId);
-        if (selectedStudent != null) {
-            Student s = (Student) selectedStudent;
-            String toEmail = s.getParentEmail();
-            String fromEmail = "csye6200@mail.com";
-            String fromPwd = "csye6200";
-            String subject = "Registration of your child - " + s.getFirstName() + " " + s.getLastName() + " is due on "
-                    + s.getExpectReNewDate() + ". Please contact the admissions team to re-enroll";
-
-            Properties properties = new Properties();
-            properties.put("mail.smtp.auth", "true");
-            properties.put("mail.smtp.starttls.enable", "true");
-            properties.put("mail.smtp.host", "smtp.mail.com");
-            properties.put("mail.smtp.port", "587");
-
-            Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
-                protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(fromEmail, fromPwd);
-                }
-            });
-
-            try {
-                MimeMessage message = new MimeMessage(session);
-                message.setFrom(new InternetAddress(fromEmail));
-                message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
-                message.setSubject(subject);
-                message.setText("We are contacting you to inform that your child - " + s.getFirstName() + " " + s.getLastName() + " registration is about to expire on " + s.getExpectReNewDate() + ". Please contact the admissions team to re-enroll");
-                Transport.send(message);
-                JOptionPane.showMessageDialog(this,
-                        "Notification sent to parent at " + toEmail,
-                        "Success",
-                        JOptionPane.OK_OPTION);
-            } catch (Exception ex) {
-                System.out.println("" + ex);
-                JOptionPane.showMessageDialog(this,
-                        "Error sending a notification",
-                        "Error",
-                        JOptionPane.ERROR);
-                return;
-            }
-        }
-
-    }//GEN-LAST:event_notifyButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JTable expiredTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton notifyButton;
     private javax.swing.JButton viewTeacherButton;
     // End of variables declaration//GEN-END:variables
 }

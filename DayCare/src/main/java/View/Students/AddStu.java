@@ -5,11 +5,20 @@
  */
 package View.Students;
 
+import Controller.AddStudentController;
+import Controller.StudentsPanelController;
+import Model.School;
+import javax.swing.JPanel;
+
 /**
  *
  * @author vedan
  */
 public class AddStu extends javax.swing.JPanel {
+    
+//    private JPanel container;
+//    private School school;
+//    private StudentsPanelController prevController;
 
     public AddStu() {
         initComponents();
@@ -209,6 +218,11 @@ public class AddStu extends javax.swing.JPanel {
 
         addStudentButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         addStudentButton.setText("Add");
+        addStudentButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addStudentButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -239,6 +253,15 @@ public class AddStu extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_parentNameTfActionPerformed
 
+    private void addStudentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentButtonActionPerformed
+        // TODO add your handling code here:
+//        AddStudentController ac = new AddStudentController(container,school,prevController);
+
+        
+        
+        
+    }//GEN-LAST:event_addStudentButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addStudentButton;
@@ -258,8 +281,8 @@ public class AddStu extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField parentEmailTf;
-    private javax.swing.JTextField parentNameTf;
+    public javax.swing.JTextField parentEmailTf;
+    public javax.swing.JTextField parentNameTf;
     public javax.swing.JTextField registrationTf;
     public javax.swing.JTextField studentFirstNameTf;
     public javax.swing.JTextField studentLastNameText;

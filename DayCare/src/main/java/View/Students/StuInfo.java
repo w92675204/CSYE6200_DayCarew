@@ -8,9 +8,6 @@ package View.Students;
 import Model.AbstractPerson;
 import Model.School;
 import Model.Student;
-import Model.StudentFactory;
-import java.awt.CardLayout;
-import java.awt.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -91,7 +88,7 @@ public class StuInfo extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Student info");
+        jLabel1.setText("Student information");
 
         backButton.setText("< Back");
 

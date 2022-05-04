@@ -46,8 +46,6 @@ public class StuInfo extends javax.swing.JPanel {
 
         Student s = (Student) student;
         registrationTf1.setText(s.getLastRegDate().toString());
-        parentNameTf.setText(s.getParentName());
-        parentEmailTf.setText(s.getParentEmail());
         gpaTf.setText(String.valueOf(s.getGPA()));
     }
 
@@ -72,12 +70,8 @@ public class StuInfo extends javax.swing.JPanel {
         ageTf = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         idTf = new javax.swing.JTextField();
-        parentNameTf = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         registrationTf1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        parentEmailTf = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         gpaTf = new javax.swing.JTextField();
         firstNameTf = new javax.swing.JTextField();
@@ -139,17 +133,9 @@ public class StuInfo extends javax.swing.JPanel {
 
         idTf.setEditable(false);
 
-        parentNameTf.setEditable(false);
-
         jLabel6.setText("Registration date");
 
-        jLabel7.setText("Parent's name");
-
         registrationTf1.setEditable(false);
-
-        jLabel8.setText("Parent's email");
-
-        parentEmailTf.setEditable(false);
 
         jLabel9.setText("GPA");
 
@@ -178,14 +164,6 @@ public class StuInfo extends javax.swing.JPanel {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(ageTf)
                             .addComponent(idTf, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(parentEmailTf, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(parentNameTf, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -216,34 +194,23 @@ public class StuInfo extends javax.swing.JPanel {
                         .addGap(33, 33, 33)
                         .addComponent(jLabel4))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(ageTf, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(27, 27, 27)
+                        .addComponent(ageTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel5))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(idTf, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(registrationTf1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(31, 31, 31)
+                        .addGap(24, 24, 24)
+                        .addComponent(idTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(parentNameTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(parentEmailTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6)
+                    .addComponent(registrationTf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(gpaTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(gpaTf, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(106, Short.MAX_VALUE))
         );
 
@@ -273,20 +240,20 @@ public class StuInfo extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveBtn)
                     .addComponent(updateBtn))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
-        List<JTextField> tfList = new ArrayList<JTextField>(Arrays.asList(firstNameTf, lastNameTf, ageTf, idTf, registrationTf1, parentNameTf, parentEmailTf, gpaTf));
+        List<JTextField> tfList = new ArrayList<JTextField>(Arrays.asList(firstNameTf, lastNameTf, ageTf, idTf, registrationTf1, gpaTf));
         tfList.forEach(tf -> setEditableValue(tf, true));
         saveBtn.setEnabled(true);
     }//GEN-LAST:event_updateBtnActionPerformed
 
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
-        List<JTextField> tfList = new ArrayList<JTextField>(Arrays.asList(firstNameTf, lastNameTf, ageTf, idTf, registrationTf1, parentNameTf, parentEmailTf, gpaTf));
+        List<JTextField> tfList = new ArrayList<JTextField>(Arrays.asList(firstNameTf, lastNameTf, ageTf, idTf, registrationTf1, gpaTf));
 
         String id = idTf.getText();
         String age = ageTf.getText();
@@ -294,10 +261,9 @@ public class StuInfo extends javax.swing.JPanel {
         String studentLastName = lastNameTf.getText();
         String regDate = registrationTf1.getText();
         String gpa = gpaTf.getText();
-        String parentName = parentNameTf.getText();
-        String parentEmail = parentEmailTf.getText();
 
-        if (studentFirstName.equals("") || age.equals("") || id.equals("") || studentLastName.equals("") || regDate.equals("") || gpa.equals("") || parentName.equals("") || parentEmail.equals("")) {
+
+        if (studentFirstName.equals("") || age.equals("") || id.equals("") || studentLastName.equals("") || regDate.equals("") || gpa.equals("")) {
             JOptionPane.showMessageDialog(this,
                     "Please fill all the required fields",
                     "Error Message",
@@ -316,8 +282,6 @@ public class StuInfo extends javax.swing.JPanel {
                 student.setFirstName(studentFirstName);
                 student.setLastName(studentLastName);
                 student.setLastRegDate(LocalDate.parse(regDate));
-                student.setParentName(parentName);
-                student.setParentEmail(parentEmail);
                 student.setAge(Integer.parseInt(age));
                 student.setGPA(Double.parseDouble(gpa));
 
@@ -352,14 +316,10 @@ public class StuInfo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField lastNameTf;
-    private javax.swing.JTextField parentEmailTf;
-    private javax.swing.JTextField parentNameTf;
     private javax.swing.JTextField registrationTf1;
     private javax.swing.JButton saveBtn;
     private javax.swing.JButton updateBtn;

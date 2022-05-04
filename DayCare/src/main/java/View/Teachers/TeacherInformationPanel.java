@@ -198,7 +198,7 @@ public class TeacherInformationPanel extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText(":: Students List Detail::");
+        jLabel9.setText(" Students List");
 
         studentsTextArea.setColumns(20);
         studentsTextArea.setRows(5);

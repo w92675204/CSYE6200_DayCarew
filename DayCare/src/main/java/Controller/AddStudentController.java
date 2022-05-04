@@ -117,10 +117,7 @@ public class AddStudentController {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-        JOptionPane.showMessageDialog(panel,
-                "Student successfully added.",
-                "Success",
-                JOptionPane.OK_OPTION);
+        JOptionPane.showMessageDialog(panel, "Student successfully added.");
     }
 
 }

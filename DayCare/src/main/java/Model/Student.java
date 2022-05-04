@@ -22,15 +22,15 @@ public class Student extends AbstractPerson {
     private String parentEmail;
 
     public Student(String csv) {
-        System.out.println("create student fail");
+//        System.out.println("create student fail");
         String[] item = csv.split(",");
         this.Id = Integer.parseInt(item[0]);
         this.Age = Integer.parseInt(item[1]);
         this.FirstName = item[2];
         this.LastName = item[3];
-        System.out.println("create student fail2");
+//        System.out.println("create student fail2");
         this.LastRegDate = LocalDate.parse(item[4]);//有错
-        System.out.println("create student fail time error");
+//        System.out.println("create student fail time error");
         ExpectReNewDate = LastRegDate.plusYears(1L);
         this.GPA = Double.parseDouble(item[5]);
 //        this.parentName = item[6];
@@ -52,7 +52,7 @@ public class Student extends AbstractPerson {
             e.printStackTrace();
             System.out.println(csv);
         }
-        System.out.println("create student fail3");
+//        System.out.println("create student fail3");
     }
 
     public Student() {

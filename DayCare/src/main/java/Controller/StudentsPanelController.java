@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 import Helper.ImageHelper;
@@ -33,7 +29,6 @@ public class StudentsPanelController {
     public JButton addStudentButton;
     public JButton backButton;
     public JButton deleteButton;
-//    private JButton immunizationButton;
     public JButton registrationButton;
     public JButton viewStudentButton;
     private JTable studentsTable;
@@ -49,7 +44,7 @@ public class StudentsPanelController {
         this.addStudentButton = panel.addStudentButton;
         this.backButton = panel.backButton;
         this.deleteButton = panel.deleteButton;
-//        this.immunizationButton = panel.immunizationButton;
+
         this.registrationButton = panel.registrationButton;
         this.viewStudentButton = panel.viewStudentButton;
 
@@ -66,10 +61,6 @@ public class StudentsPanelController {
         registrationButton.addActionListener(l -> {
             showStudentRegistrationInfo();
         });
-
-//        immunizationButton.addActionListener(l -> {
-//            showImmunizationInfo();
-//        });
 
         deleteButton.addActionListener(l -> {
             deleteStudent();
@@ -90,7 +81,6 @@ public class StudentsPanelController {
     private void setIcons() {
         ImageHelper imageHelper = new ImageHelper();
 
-//        buttonIconMap.put(immunizationButton, "/icons/immunization.png");
         buttonIconMap.put(registrationButton, "/icons/renewal.png");
 
         for (Map.Entry<JButton, String> button : buttonIconMap.entrySet()) {
@@ -179,9 +169,7 @@ public class StudentsPanelController {
         }
         populateTable();
         JOptionPane.showMessageDialog(panel,
-                "Student deleted.",
-                "Success",
-                JOptionPane.OK_OPTION);
+                "Student deleted.");
     }
 
     private void addStudent() {

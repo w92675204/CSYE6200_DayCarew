@@ -87,17 +87,6 @@ public class Teacher extends AbstractPerson {
 
     public int getWage(){return this.Wage;}
 
-//    @Override
-//    public void setName(String name) {
-//        // TODO Auto-generated method stub
-//
-//    }
-//    @Override
-//    public String getName() {
-//        // TODO Auto-generated method stub
-//        return null;
-//    }
-//
     public void addStudent(Student s){
         StudentList.add(s);
         s.setTid(this.Id);

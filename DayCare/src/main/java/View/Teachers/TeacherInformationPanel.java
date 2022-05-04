@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package View.Teachers;
 
-import View.Students.*;
 import Model.AbstractPerson;
 import Model.School;
 import Model.Student;
 import Model.Teacher;
-import java.awt.BorderLayout;
 import java.awt.CardLayout;
-import java.awt.Component;
 import javax.swing.JPanel;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
@@ -24,9 +17,7 @@ public class TeacherInformationPanel extends javax.swing.JPanel {
     private School school;
     private AbstractPerson teacher;
 
-    /**
-     * Creates new form StudentInformationPanel
-     */
+
     public TeacherInformationPanel(JPanel container, AbstractPerson teacher) {
         initComponents();
         this.container = container;
@@ -44,26 +35,7 @@ public class TeacherInformationPanel extends javax.swing.JPanel {
         for (Student s : t.getStudentList()) {
             studentsTextArea.append("ID: " + s.getId() + " Name: " + s.getFirstName() + " " + s.getLastName() + "\n");
         }
-
-//        JFreeChart chart = createChart(createDataset(t.getCount(), t.getSize()));
-//        System.out.println(chart);
-//        ChartPanel chartPanel = new ChartPanel(chart);
-        // System.out.println(chartPanel);
-        // teacherChartPanel.setLayout(null);
-//        teacherChartPanel.setLayout(new java.awt.BorderLayout());
-//        teacherChartPanel.add(chartPanel, BorderLayout.CENTER);
     }
-//
-//    private JFreeChart createChart(PieDataset dataset) {
-//        JFreeChart chart = ChartFactory.createPieChart(
-//                "Teacher's group count vs space left", // chart title 
-//                dataset, // data    
-//                true, // include legend   
-//                true,
-//                false);
-//
-//        return chart;
-//    }
 
     private PieDataset createDataset(int count, int size) {
         DefaultPieDataset dataset = new DefaultPieDataset();

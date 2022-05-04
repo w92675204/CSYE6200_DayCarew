@@ -22,19 +22,14 @@ public class Student extends AbstractPerson {
     private String parentEmail;
 
     public Student(String csv) {
-//        System.out.println("create student fail");
         String[] item = csv.split(",");
         this.Id = Integer.parseInt(item[0]);
         this.Age = Integer.parseInt(item[1]);
         this.FirstName = item[2];
         this.LastName = item[3];
-//        System.out.println("create student fail2");
         this.LastRegDate = LocalDate.parse(item[4]);//有错
-//        System.out.println("create student fail time error");
         ExpectReNewDate = LastRegDate.plusYears(1L);
         this.GPA = Double.parseDouble(item[5]);
-//        this.parentName = item[6];
-//        this.parentEmail = item[7];
         Scanner sc = new Scanner(csv);
         sc.useDelimiter(",");
         try {
@@ -42,17 +37,13 @@ public class Student extends AbstractPerson {
             this.Age = sc.nextInt();
             this.FirstName = sc.next();
             this.LastName = sc.next();
-//            this.ImuDate = LocalDate.parse(sc.next());
-
-
-
 
         }catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();
             System.out.println(csv);
         }
-//        System.out.println("create student fail3");
+
     }
 
     public Student() {
@@ -61,42 +52,33 @@ public class Student extends AbstractPerson {
 
     @Override
     public int getId() {
-        // TODO Auto-generated method stub
         return this.Id;
     }
 
     @Override
     public void setId(int id) {
-        // TODO Auto-generated method stub
         this.Id = id;
     }
 
     public void setAge(int age) {
-        // TODO Auto-generated method stub
         this.Age = age;
     }
 
     public int getAge() {
-        // TODO Auto-generated method stub
         return this.Age;
     }
 
-//    @Override
-//    public void setName(String name) {
-//
-//    }
+
     public void setClassId(int cid) {
         this.ClassId = cid;
     }
 
     public void setFirstName(String firstName) {
-        // TODO Auto-generated method stub
         this.FirstName = firstName;
 
     }
 
     public String getFirstName() {
-        // TODO Auto-generated method stub
         return this.FirstName;
     }
 

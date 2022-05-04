@@ -31,13 +31,13 @@ public class DB4OUtil {
         try {
             EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();
             config.common().add(new TransparentPersistenceSupport());
-            //Controls the number of objects in memory
+ 
             config.common().activationDepth(Integer.MAX_VALUE);
-            //Controls the depth/level of updation of Object
+ 
             config.common().updateDepth(Integer.MAX_VALUE);
 
-            //Register your top most Class here
-            config.common().objectClass(School.class).cascadeOnUpdate(true); // Change to the object you want to save
+    
+            config.common().objectClass(School.class).cascadeOnUpdate(true); 
 
             ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);            
             return db;
@@ -56,10 +56,10 @@ public class DB4OUtil {
     
     public School retrieveSystem(){
         ObjectContainer conn = createConnection();
-        ObjectSet<School> schools = conn.query(School.class); // Change to the object you want to save
+        ObjectSet<School> schools = conn.query(School.class); 
         School school;
         if (schools.size() == 0){
-            school = ConfigureSystem.configure();  // If there's no System in the record, create a new one
+            school = ConfigureSystem.configure(); 
         }
         else{
             school = schools.get(schools.size() - 1);

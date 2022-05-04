@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package View.Students;
 
 import Model.AbstractPerson;
@@ -272,7 +268,6 @@ public class StuInfo extends javax.swing.JPanel {
             return;
         }
 
-        // String studentString = id + "," + age + "," + studentFirstName + "," + studentLastName + "," + regDate + "," + gpa + "," + parentName + "," + parentEmail;
         try {
             int studentId = Integer.parseInt(id);
             AbstractPerson s = school.findStudentById(studentId);

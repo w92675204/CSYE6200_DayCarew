@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 import Model.School;
@@ -31,8 +27,6 @@ public class AddStudentController {
     public javax.swing.JButton backButton;
     public javax.swing.JTextField gpaTf;
     
-//    public javax.swing.JTextField parentEmailTf;
-//    public javax.swing.JTextField parentNameTf;
     public javax.swing.JTextField registrationTf;
     
 
@@ -49,8 +43,7 @@ public class AddStudentController {
         this.backButton = panel.backButton;
         this.gpaTf = panel.gpaTf;
         this.idTextField = panel.idTextField;
-//        this.parentEmailTf = panel.parentEmailTf;
-//        this.parentNameTf = panel.parentNameTf;
+
         this.registrationTf = panel.registrationTf;
         this.studentFirstNameTf = panel.studentFirstNameTf;
         this.studentLastNameText = panel.studentLastNameText;
@@ -79,11 +72,7 @@ public class AddStudentController {
     }
 
     private void addStudent() {
-        // TODO add your handling code here:
-        /**
-         * 1. Get all the info from the text fields 2. Use the student factory
-         * to get the Student object and populate the information from here
-         */
+
 
         String id = idTextField.getText();
         String age = ageText.getText();
@@ -91,8 +80,7 @@ public class AddStudentController {
         String studentLastName = studentLastNameText.getText();
         String regDate = registrationTf.getText();
         String gpa = gpaTf.getText();
-//        String parentName = parentNameTf.getText();
-//        String parentEmail = parentEmailTf.getText();
+
 
         if (studentFirstName.equals("") || age.equals("") || id.equals("") || studentLastName.equals("") || regDate.equals("") || gpa.equals("")) {
             JOptionPane.showMessageDialog(panel,
@@ -102,14 +90,12 @@ public class AddStudentController {
             return;
         }
 
-//        String address = addressText.getText();
-//        String gender = genderCombo.getSelectedItem().toString();
         String studentString = id + "," + age + "," + studentFirstName + "," + studentLastName + "," + regDate + "," + gpa ;
 
         try {
             Student s = StudentFactory.getInstance().getObject(studentString);//有错原因：添加时间格式要按照2008-03-06格式来写
             school.addStudent(s);
-            // school.addAllStudentToCSV();
+
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(panel,
                     "Error. Unable to create the student",

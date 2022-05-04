@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 import Model.AbstractPerson;
@@ -21,7 +17,6 @@ public class ImmunizationPanelController {
     private JPanel container;
     private School school;
     private List<AbstractPerson> studentsList;
-//    private StudentsPanelController prevController;
 
     private ImmunizationInformationPanel panel;
 

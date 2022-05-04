@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 import Model.Classroom;
@@ -56,7 +52,7 @@ public class ClassroomsPanelController {
         DefaultTableModel model = (DefaultTableModel) classroomsTable.getModel();
         model.setRowCount(0);
         school.showAll();
-        // TODO: Add wage column to the table
+
         for (Classroom classroom
                 : school.getClassroomList()) {
             Object[] row = new Object[4];
@@ -84,12 +80,12 @@ public class ClassroomsPanelController {
             return;
         }
 
-        // Get the teacherId of the selected row from the table
+
         int classroomId = (int) classroomsTable.getValueAt(selectedRow, 0);
 
         for (Classroom classroom : school.getClassroomList()) {
             if (classroom.getId() == classroomId) {
-                // ClassroomsInformationPanel classroomInfoPanel = new ClassroomsInformationPanel(container, classroom);
+ 
                 ClassroomsInformationPanel classroomInfoPanel = new ClassroomsInformationPanel(container, classroom);
                 container.add(classroomInfoPanel);
                 CardLayout layout = (CardLayout) container.getLayout();

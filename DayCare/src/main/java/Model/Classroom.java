@@ -62,7 +62,6 @@ public class Classroom {
     }
 
     public void showTeachers(){
-        //System.out.println(TeacherList);
         if(!TeacherList.isEmpty()){
             for (Teacher t: TeacherList){
                 t.showStudents();

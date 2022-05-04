@@ -21,13 +21,7 @@ public class School {
 
         tid = 0;
         cid = 0;
-        //Classroom c = new Classroom();
-        //Classroom c = ClassroomFactory.getInstance().getObject(cid++,0,35);
-//        for(int i = 0; i < 3; i++){
-//            c.addTeacher(generateTeacher(3));
-//
-//        }
-//        ClassroomList.add(c);
+
 
     }
     public void addAllStudentToCSV(){
@@ -43,18 +37,11 @@ public class School {
     }
 
     public Teacher generateTeacher(int size,int cid){
-        //Teacher t = new Teacher(tid++);
+
         Teacher t = TeacherFactory.getInstance().getObject(tid++,size,cid);
         return t;
     }
 
-//    private void addTeacher(Teacher t){
-//        TeacherList.add(t);
-//        addToClassroom(t);
-//
-//
-//
-//    }
 
     public void addStudent(Student s){
         StudentList.add(s);
@@ -80,19 +67,7 @@ public class School {
         this.StudentList = students;        
     }
 
-//    private void addToClassroom(Teacher t){
-//        for(Classroom c : ClassroomList){
-//            if (c.isEmpty()){
-//                c.addTeacher(t);
-//            }
-//            else{
-//                Classroom c1 = new Classroom();
-//                c1.addTeacher(t);
-//                ClassroomList.add(c1);
-//
-//            }
-//        }
-//    }
+
 
     private void addToClassroom(Student s){
         if (ClassroomList.isEmpty()){
@@ -115,7 +90,6 @@ public class School {
         }
         for(Classroom c : ClassroomList){
             if (c.inRange(s.getAge())){
-                //System.out.println(s.getId()+"in range");
                 for(Teacher t:c.getTeacherList()){
                     if(t.isEmpty()){
                         s.setClassId(c.getId());
@@ -143,42 +117,7 @@ public class School {
             }
         }
 
-//        if (0<s.getAge() && s.getAge()<=35){
-//            //Classroom c = new Classroom(cid++,0,35);
-//            Classroom c = ClassroomFactory.getInstance().getObject(cid++,r.getLow(),r.getHigh());
-//            Teacher t = generateTeacher(r.getSize());
-//            s.setClassId(c.getId());
-//            t.addStudent(s);
-//            for(int i = 0; i < 2; i++){
-//                c.addTeacher(generateTeacher(r.getSize()));
-//
-//            }
-//            ClassroomList.add(c);
-//        }
-//        else if(35<=s.getAge() && s.getAge()<=60){
-//            //Classroom c = new Classroom(cid++,35,60);
-//            Classroom c = ClassroomFactory.getInstance().getObject(cid++,35,60);
-//            Teacher t = generateTeacher(3);
-//            s.setClassId(c.getId());
-//            t.addStudent(s);
-//            for(int i = 0; i < 2; i++){
-//                c.addTeacher(generateTeacher(3));
-//
-//            }
-//            ClassroomList.add(c);
-//        }
-//        else{
-//            //Classroom c = new Classroom(cid++,60,9999);
-//            Classroom c = ClassroomFactory.getInstance().getObject(cid++,60,9999);
-//            Teacher t = generateTeacher(3);
-//            s.setClassId(c.getId());
-//            t.addStudent(s);
-//            for(int i = 0; i < 2; i++){
-//                c.addTeacher(generateTeacher(3));
-//
-//            }
-//            ClassroomList.add(c);
-        //}
+
 
 
 
@@ -279,10 +218,5 @@ public class School {
     public void setRatioRules(List<RatioRule> ratioRules) {
         this.ratioRules = ratioRules;
     }
-
-
-
-
-
 
 }

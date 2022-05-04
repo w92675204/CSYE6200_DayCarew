@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package View.Teachers;
 
 import Model.Classroom;
@@ -37,13 +33,12 @@ public class EmployeeReviewsPanel extends javax.swing.JPanel {
         for (Classroom classroom : school.getClassroomList()) {
             for (Teacher t : classroom.getTeacherList()) {
                 allTeachers.add(t);
-                // reviewTextArea.append(t.getFirstName() + " " + t.getLastName() + " review due on " + t.getReviewDate().toString() + "\n");
             }
         }
         
         List<Teacher> sorted = allTeachers.stream().sorted(Comparator.comparing(Teacher::getReviewDate)).collect(toList());
         
-        sorted.forEach(t -> reviewTextArea.append(t.getFirstName() + " " + t.getLastName() + " review due on " + t.getReviewDate().toString() + "\n"));        
+        sorted.forEach(t ->  reviewTextArea.append("\t" + t.getFirstName() + " " + t.getLastName() + " review due on " + t.getReviewDate().toString() + "\n\n"));        
     }
 
     /**

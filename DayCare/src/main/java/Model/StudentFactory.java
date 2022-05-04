@@ -10,10 +10,7 @@ public class StudentFactory extends AbstractFactory{
     }
 
     public Student getObject(String csv){
-//        System.out.println("getobject fail");
-//        System.out.println(new Student(csv));
-        return new Student(csv);
-        
+        return new Student(csv);     
     }
 
 }

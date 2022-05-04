@@ -18,6 +18,7 @@ public class RatioRule {
     public int getHigh(){return  high;}
     public int getGroupSize(){return GroupSize;}
     public int getClassroomSize(){return ClassroomSize;}
+    public int getNumber(){return GroupSize;}
     public boolean inRange(int age){
         return (low<=age && age < high);
     }

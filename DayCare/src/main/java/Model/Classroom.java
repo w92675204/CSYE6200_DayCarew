@@ -7,15 +7,21 @@ public class Classroom {
 
     private int size;
     private int Id;
+    private int number;
     private List<Teacher> TeacherList = new ArrayList<>();
     private int count;
     private int[] AgeRange = new int[2];
 
-    public Classroom(int id, int low,int high,int size){
+    public Classroom(int id, int low,int high,int size, int number){
         this.Id = id;
         this.AgeRange[0] = low;
         this.AgeRange[1] = high;
+        this.number=number;
         this.size = size;
+    }
+
+    public int getNumber() {
+        return this.number;
     }
 
     public int[] getAgeRange(){

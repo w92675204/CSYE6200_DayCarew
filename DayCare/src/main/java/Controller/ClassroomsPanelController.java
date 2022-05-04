@@ -65,7 +65,7 @@ public class ClassroomsPanelController {
             int high = classroom.getAgeRange()[1];
             String range = String.valueOf(low) + " - " + String.valueOf(high);
             row[1] = range;
-            row[2] = classroom.getCount();
+            row[2] = classroom.getNumber();
             row[3] = classroom.getSize();
             model.addRow(row);
         }

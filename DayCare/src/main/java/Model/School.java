@@ -98,7 +98,7 @@ public class School {
         if (ClassroomList.isEmpty()){
             for (RatioRule r:ratioRules){
                 if (r.inRange(s.getAge())){
-                    Classroom c = ClassroomFactory.getInstance().getObject(cid++,r.getLow(),r.getHigh(), r.getClassroomSize());
+                    Classroom c = ClassroomFactory.getInstance().getObject(cid++,r.getLow(),r.getHigh(), r.getClassroomSize(), r.getNumber());
                     Teacher t = generateTeacher(r.getGroupSize(),c.getId());
                     s.setClassId(c.getId());
                     t.addStudent(s);
@@ -129,7 +129,7 @@ public class School {
         }
         for (RatioRule r:ratioRules){
             if (r.inRange(s.getAge())){
-                Classroom c = ClassroomFactory.getInstance().getObject(cid++,r.getLow(),r.getHigh(),r.getClassroomSize());
+                Classroom c = ClassroomFactory.getInstance().getObject(cid++,r.getLow(),r.getHigh(),r.getClassroomSize(), r.getNumber());
                 Teacher t = generateTeacher(r.getGroupSize(),c.getId());
                 s.setClassId(c.getId());
                 t.addStudent(s);

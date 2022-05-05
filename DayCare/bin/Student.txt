@@ -1,6 +1,0 @@
-1001,6,James,Barker,2021-10-11,3.2,Wayne Rooney,vedant1903+rooney@gmail.com
-1002,45,Tamara,Quinn,2020-06-11,3.3,John Terry,vedant1903+terry@gmail.com
-1003,66,Louie,Lamb,2021-08-11,3.1,Steven Gerrard,vedant1903+gerrard@gmail.com
-1004,64,Cohen,Ryder,2021-03-16,3.2,Frank Lampard,vedant1903+lampard@gmail.com
-1005,25,Ashley,Williams,2020-09-06,3.3,Anthony Joshua,vedant1903+anthony@gmail.com
-1006,56,Jeff,Rider,2021-01-11,3.1,Ghost Rider,vedant1903+rider@gmail.com
